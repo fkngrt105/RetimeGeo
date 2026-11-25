@@ -1,4 +1,8 @@
 # 🧭 RetimeGeo v3.1 (Turbo Interactive)
+![Shell](https://img.shields.io/badge/Shell-zsh-89e051?logo=gnubash&logoColor=white)
+![Platform](https://img.shields.io/badge/Platform-macOS-000000?logo=apple&logoColor=white)
+![Version](https://img.shields.io/badge/Version-v3.1-blue)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
 > **拨正时光指针，锚定全球坐标，交互按需归档。**  
 > 一款运行于 macOS 终端的轻量级相册元数据修复与交互式多维度归档引擎。先全自动静默完成防卡死质检、批量格式纠偏、真实时间线还原与内部 EXIF 刻录，随后通过终端数字交互菜单按拍摄设备型号、国家地级市或拍摄年月按需分拣，支持单次会话连续接力处理多个相册。
@@ -74,3 +78,6 @@ sudo ln -sf "$HOME/fix_photos.sh" /usr/local/bin/rt
 ```bash
 retimegeo "~/Downloads/目标相册文件夹"
 ```
+---
+
+*Co-crafted with Gemini ✨*
