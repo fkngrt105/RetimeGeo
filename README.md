@@ -1,4 +1,5 @@
 # 🧭 RetimeGeo v3.2 (Turbo Interactive)
+
 ![Shell](https://img.shields.io/badge/Shell-zsh-89e051?logo=gnubash&logoColor=white)
 ![Platform](https://img.shields.io/badge/Platform-macOS-000000?logo=apple&logoColor=white)
 ![Version](https://img.shields.io/badge/Version-v3.2-blue)
@@ -20,7 +21,12 @@
 - **v2.4 `Atlas`（智能兜底重点版）**：新增提取外层文件夹年月自动兜底定日（当月 15 日 `12:00:00`），彻底消灭纯哈希网图手工残留。
 - **v2.6 – v2.8 `SafeGuard`（体验与稳定性打磨）**：加入已知日期秒跳过、`-q -q` 静默输出、地级市聚合及 `[0/5]` 防卡死质检护盾。
 - **v3.0 – v3.1 `Turbo Interactive`（交互控制台跃迁）**：解耦“全自动校时”与“终端数字交互分拣”，支持按设备型号、城市或拍摄年月拆夹，以及批量 JSON 纠偏与 SSD 5 秒冷却缓冲。
-- **v3.2 `Turbo Interactive`（路径兼容与目录净化 · 当前最新）**：自动清理访达拖入带空格路径时的首尾引号、末尾斜杠与 `\ ` 转义反斜杠；阶段 2 分拣完成后自动扫描并清理遗留的空子文件夹。
+
+### RetimeGeo v3.2 (Turbo Interactive)
+
+- **拖拽路径转义空格兼容**：自动清理访达拖入带空格路径时的首尾引号、末尾斜杠与 `\ ` 转义反斜杠，减少路径无效报错。
+- **自动清理空目录残余**：阶段 2 分类完成后自动扫描并清理遗留的空子文件夹，保持目录结构清爽。
+- **延续 v3.1 高速与稳定性底座**：保留 SafeGuard 防卡死质检、单次批量 JSON 伪装后缀纠偏、5 秒磁盘落盘冷却缓冲与 `[0-4]` 终端数字交互控制台（支持按设备型号、国家地级市或拍摄年月分拣及连续接力处理）。
 
 ---
 
