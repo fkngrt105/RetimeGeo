@@ -1,6 +1,6 @@
 #!/bin/zsh
 # ==============================================================================
-# Project: RetimeGeo v3.1 (Turbo Interactive)
+# Project: RetimeGeo v3.2 (Turbo Interactive)
 # Description: High-Speed Batch Metadata Retimer, Disk Cooldown & Interactive Sorter
 # Features:
 #   - Phase 1 (Auto): SafeGuard quarantine, fast batch JSON format de-masquerading,
@@ -18,15 +18,16 @@ process_folder() {
   local START_TIME=$SECONDS
   local TARGET_DIR="$1"
 
-  # 清理拖拽路径附带的首尾引号与末尾斜杠
+  # 清理拖拽路径附带的首尾引号、反斜杠转义空格与末尾斜杠
   TARGET_DIR="${TARGET_DIR%\"}"
   TARGET_DIR="${TARGET_DIR#\"}"
   TARGET_DIR="${TARGET_DIR%\'}"
   TARGET_DIR="${TARGET_DIR#\'}"
+  TARGET_DIR="${TARGET_DIR//\\ / }"
   TARGET_DIR="${TARGET_DIR%/}"
 
   if [ -z "$TARGET_DIR" ] || [ ! -d "$TARGET_DIR" ]; then
-    echo "❌ [RetimeGeo v3.1] 无效的文件夹路径：$TARGET_DIR"
+    echo "❌ [RetimeGeo v3.2] 无效的文件夹路径：$TARGET_DIR"
     return 1
   fi
 
@@ -48,7 +49,7 @@ if m:
   local TOTAL_FILES=$(find "$TARGET_DIR" -maxdepth 1 -type f ! -name ".*" | wc -l | tr -d ' ')
 
   echo "=================================================================="
-  echo "🧭 [RetimeGeo v3.1 Turbo Interactive] 启动阶段 1：极速校时与防卡死质检"
+  echo "🧭 [RetimeGeo v3.2 Turbo Interactive] 启动阶段 1：极速校时与防卡死质检"
   echo "📁 目标目录: $FOLDER_NAME (顶层共 $TOTAL_FILES 个文件)"
   if [ -n "$FALLBACK_DATE" ]; then
     echo "📅 检测到目录年月线索，无时间线索网图将兜底设为: $FALLBACK_DATE"
@@ -213,6 +214,7 @@ for f in files:
     shutil.move(os.path.join(target, f), os.path.join(dest_dir, f))
 print("✅ 已按设备型号完成分类！当前目录结构：")
 MODEL_EOF
+        find "$TARGET_DIR" -mindepth 1 -type d -empty -delete 2>/dev/null
         ls -1d "$TARGET_DIR"/*/ 2>/dev/null
         ;;
       2)
@@ -289,6 +291,7 @@ print("\n✅ 已完成地级市与四层漏斗归档！当前目录结构：")
 PYEOF
         python3 "$TMP_PY" "$TARGET_DIR" "$DL_YM"
         rm -f "$TMP_PY"
+        find "$TARGET_DIR" -mindepth 1 -type d -empty -delete 2>/dev/null
         ls -1d "$TARGET_DIR"/*/ 2>/dev/null
         ;;
       3)
@@ -316,6 +319,7 @@ for f in files:
     shutil.move(os.path.join(target, f), os.path.join(dest_dir, f))
 print("✅ 已按拍摄年月完成拆夹！当前目录结构：")
 YM_EOF
+        find "$TARGET_DIR" -mindepth 1 -type d -empty -delete 2>/dev/null
         ls -1d "$TARGET_DIR"/*/ 2>/dev/null
         ;;
       4)
@@ -325,7 +329,7 @@ YM_EOF
         return $?
         ;;
       0)
-        echo "\n🎉 已完成全部操作，退出 RetimeGeo v3.1 Turbo Interactive！"
+        echo "\n🎉 已完成全部操作，退出 RetimeGeo v3.2 Turbo Interactive！"
         return 0
         ;;
       *)
