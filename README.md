@@ -1,7 +1,7 @@
 # 🧭 RetimeGeo v3.2 (Turbo Interactive)
 ![Shell](https://img.shields.io/badge/Shell-zsh-89e051?logo=gnubash&logoColor=white)
 ![Platform](https://img.shields.io/badge/Platform-macOS-000000?logo=apple&logoColor=white)
-![Version](https://img.shields.io/badge/Version-v3.1-blue)
+![Version](https://img.shields.io/badge/Version-v3.2-blue)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
 > **拨正时光指针，锚定全球坐标，交互按需归档。**  
