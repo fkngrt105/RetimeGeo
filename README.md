@@ -1,4 +1,4 @@
-# 🧭 RetimeGeo v3.1 (Turbo Interactive)
+# 🧭 RetimeGeo v3.2 (Turbo Interactive)
 ![Shell](https://img.shields.io/badge/Shell-zsh-89e051?logo=gnubash&logoColor=white)
 ![Platform](https://img.shields.io/badge/Platform-macOS-000000?logo=apple&logoColor=white)
 ![Version](https://img.shields.io/badge/Version-v3.1-blue)
